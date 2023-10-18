@@ -5,9 +5,9 @@ from pymodaq.utils.parameter import Parameter
 from qtpy import QtWidgets, QtCore
 from time import perf_counter
 import numpy as np
+from abc import ABC, abstractmethod
 
-
-class DAQ_2DViewer_GenericPylablibCamera(DAQ_Viewer_base):
+class DAQ_2DViewer_GenericPylablibCamera(DAQ_Viewer_base, ABC):
     """
     IMPORTANT: THIS IS A GENERIC CLASS THAT DOES NOT WORK ON ITS OWN!
 
@@ -36,6 +36,7 @@ class DAQ_2DViewer_GenericPylablibCamera(DAQ_Viewer_base):
     roi_pos_size = QtCore.QRectF(0,0,10,10)
     axes = []
 
+    @abstractmethod
     def init_controller(self):
         raise NotImplementedError('This is a generic camera plugin for which .init_controller() has not been defined.')
 

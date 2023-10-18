@@ -1,19 +1,19 @@
-pymodaq_plugins_pylablib (Generic library)
+pymodaq_abstract_pylablib (Generic library)
 ##########################################
 
-.. image:: https://img.shields.io/pypi/v/pymodaq_plugins_thorlabs.svg
-   :target: https://pypi.org/project/pymodaq_plugins_pylablib/
+.. image:: https://img.shields.io/pypi/v/pymodaq_abstract_pylablib.svg
+   :target: https://pypi.org/project/pymodaq_abstract_pylablib/
    :alt: Latest Version
 
 .. image:: https://readthedocs.org/projects/pymodaq/badge/?version=latest
    :target: https://pymodaq.readthedocs.io/en/stable/?badge=latest
    :alt: Documentation Status
 
-.. image:: https://github.com/Attolab/pymodaq_plugins_pylablib/workflows/Upload%20Python%20Package/badge.svg
-   :target: https://github.com/PyMoDAQ/pymodaq_plugins_pylablib
+.. image:: https://github.com/Attolab/pymodaq_abstract_pylablib/workflows/Upload%20Python%20Package/badge.svg
+   :target: https://github.com/Attolab/pymodaq_abstract_pylablib
    :alt: Publication Status
 
-PyMoDAQ generic plugins meant to be subclassed for quick implementation of cameras using the pylablib library.
+PyMoDAQ generic plugins meant to be subclassed for quick implementation using the pylablib library. Currently only cameras are handled.
 List of cameras that can be interfaced using this class: `pylablib documentation <https://pylablib.readthedocs.io/en/latest/devices/cameras_root.html>`_
 
 **Important:** this is for development purposes only, the plugin will not work on its own.
@@ -33,7 +33,7 @@ Viewer2D
 ++++++++
 
 * **GenericPylablibCamera**: Generic plugin for a camera, handling hardware ROI, hardware binning, grabbing frames using a callback, switching between 1D and 2D depending on data shape, and optional framerate display.
-The class needs to be subclassed in order to define two simple ``list_cameras`` and ``init_controller`` methods, which depend on the actual camera.
+The class needs to be subclassed in order to define the list ``list_cameras`` and the method ``init_controller``, which depend on the actual camera.
 
 Infos
 =====

@@ -1,10 +1,10 @@
 ## To modify by developper(s) of the plugin
 
 [plugin-info]
-SHORT_PLUGIN_NAME = 'pylablib_camera'  #to be modified, for instance daqmx then rename the module name:
+SHORT_PLUGIN_NAME = 'abstract_pylablib'  #to be modified, for instance daqmx then rename the module name:
 # (pymodaq_plugins_template become pymodaq_plugins_daqmx for instance)
 
-package-url = 'https://github.com/Attolab/pymodaq_plugins_pylablib' #to modify
+package-url = 'https://github.com/Attolab/pymodaq_abstract_pylablib' #to modify
 description = 'Generic pymodaq plugins based on the pylablib library '
 
 author = 'Romain Géneaux'
@@ -13,4 +13,4 @@ license = 'MIT'
 
 [plugin-install]
 #packages required for your plugin:
-packages-required = ['numpy', 'pymodaq<4.0', 'pylablib']
+packages-required = ['numpy', 'pymodaq>4.0', 'pylablib']
